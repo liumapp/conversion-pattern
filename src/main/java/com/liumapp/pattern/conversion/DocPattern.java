@@ -11,6 +11,12 @@ import java.io.Serializable;
  */
 public class DocPattern implements Serializable {
 
+    /**
+     * 1. oss
+     * 2. sys
+     */
+    private String type;
+
     private String ossPath;
 
     private String sysPath;
@@ -18,6 +24,14 @@ public class DocPattern implements Serializable {
     private String pdfPath;
 
     public DocPattern() {
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getOssPath() {
@@ -47,7 +61,8 @@ public class DocPattern implements Serializable {
     @Override
     public String toString() {
         return "DocPattern{" +
-                "ossPath='" + ossPath + '\'' +
+                "type='" + type + '\'' +
+                ", ossPath='" + ossPath + '\'' +
                 ", sysPath='" + sysPath + '\'' +
                 ", pdfPath='" + pdfPath + '\'' +
                 '}';
